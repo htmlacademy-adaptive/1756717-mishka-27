@@ -1,1 +1,5 @@
-// Начните писать стили здесь
+@use "global/fonts.scss";
+@use "global/global.scss";
+@use "blocks/page.scss";
+@use "blocks/page-body.scss";
+@use "blocks/container.scss";
