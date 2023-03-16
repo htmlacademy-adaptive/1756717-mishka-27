@@ -10,6 +10,8 @@ import terser from 'gulp-terser';
 import squoosh from 'gulp-libsquoosh';
 import svgo from 'gulp-svgmin';
 import { stacksvg } from 'gulp-stacksvg';
+import { htmlValidator } from 'gulp-w3c-html-validator';
+import bemlinter from 'gulp-html-bemlinter';
 import { deleteAsync } from 'del';
 import browser from 'browser-sync';
 
@@ -34,6 +36,17 @@ const html = () => {
   return gulp.src('source/*.html')
     .pipe(htmlmin({ collapseWhitespace: true, conservativeCollapse: true }))
     .pipe(gulp.dest('build'));
+}
+
+export const validateMarkup = () => {
+	return gulp.src('build/*.html')
+		.pipe(htmlValidator.analyzer())
+		.pipe(htmlValidator.reporter({ throwErrors: true }));
+}
+
+export const lintBem = () => {
+	return gulp.src('build/*.html')
+		.pipe(bemlinter());
 }
 
 // Scripts
@@ -131,6 +144,7 @@ const reload = (done) => {
 const watcher = () => {
   gulp.watch('source/sass/**/*.scss', gulp.series(styles));
   gulp.watch('source/js/*.js', gulp.series(scripts));
+  gulp.watch('source/img/icons/*.svg', gulp.series(sprite, reload));
   gulp.watch('source/*.html', gulp.series(html)).on('change', browser.reload);
 }
 

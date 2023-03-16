@@ -25,7 +25,9 @@
   "scripts": {
     "editorconfig": "editorconfig-cli",
     "stylelint": "stylelint \"source/sass/**/*.scss\" --syntax scss",
-    "lint": "npm run editorconfig && npm run stylelint",
+    "w3c": "gulp validateMarkup --series --silent",
+    "bemlint": "gulp lintBem --series --silent",
+    "lint": "npm run editorconfig && npm run stylelint && npm run w3c && npm run bemlint",
     "build": "gulp build",
     "start": "gulp"
   },
@@ -47,5 +49,9 @@
   "engines": {
     "node": "^16"
   },
-  "type": "module"
+  "type": "module",
+  "dependencies": {
+    "gulp-html-bemlinter": "^2.1.2",
+    "gulp-w3c-html-validator": "^5.2.0"
+  }
 }
