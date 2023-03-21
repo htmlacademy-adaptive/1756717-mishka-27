@@ -1,0 +1,53 @@
+@use "../global/variable.scss" as var;
+
+.extra-nav {
+  display: none;
+
+  @media (min-width: var.$tablet-width) {
+    display: flex;
+    grid-column: 2 / -1;
+    justify-self: end;
+    z-index: 2;
+  }
+
+  @media (min-width: var.$desktop-width) {
+    grid-column: 1 / -1;
+    width: 100%;
+  }
+}
+
+.extra-nav__item {
+  padding: 21px 0;
+
+  &:not(:last-child) {
+    @media (min-width: var.$tablet-width) {
+      display: none;
+    }
+
+    @media (min-width: var.$desktop-width) {
+      display: block;
+      margin: 0 62px 0 0;
+    }
+  }
+
+  &:last-child {
+    @media (min-width: var.$desktop-width) {
+      margin: 0 0 0 auto;
+    }
+  }
+}
+
+.extra-nav__text {
+  @media (min-width: var.$tablet-width) {
+    margin: 0;
+    font-weight: 400;
+    font-size: 15px;
+    color: var.$charcoal;
+  }
+}
+
+.extra-nav__link {
+  @media (min-width: var.$desktop-width) {
+    font-size: 15px;
+  }
+}

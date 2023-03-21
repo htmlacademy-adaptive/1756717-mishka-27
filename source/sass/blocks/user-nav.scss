@@ -1,0 +1,68 @@
+@use "../global/variable.scss" as var;
+
+.user-nav {
+  top: 48%;
+
+  @media (min-width: var.$tablet-width) {
+    position: relative;
+    top: unset;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: end;
+    grid-column: 2 / -1;
+    grid-row: 1 / 2;
+    width: auto;
+    margin: 0 -50px 0 0;
+    padding: 0 50px 0 0;
+  }
+
+  @media (min-width: var.$desktop-width) {
+    grid-column: 3 / -1;
+    padding: 0 52px 0 0;
+  }
+}
+
+.user-nav__item {
+  padding: 28px 30px 27px 30px;
+
+  @media (min-width: var.$tablet-width) {
+    padding: 29px 32px 27px 32px;
+    border-left: 1px solid rgba(var.$black, 0.1);
+
+    &:last-child {
+      padding: 29px 0 27px 32px;
+    }
+  }
+}
+
+.user-nav__link {
+  display: flex;
+  align-items: center;
+
+  &:hover {
+    .user-nav__icon {
+      color: var.$downy;
+      opacity: 1;
+    }
+  }
+}
+
+.user-nav__icon {
+  margin: 0 28px 0 0;
+  color: var.$black;
+  opacity: 0.2;
+
+  @media (min-width: var.$tablet-width) {
+    margin: 0 32px 0 0;
+
+    &--hidden-text {
+      margin: 0;
+    }
+  }
+}
+
+.user-nav__text {
+  @media (min-width: var.$tablet-width) {
+    display: none;
+  }
+}
