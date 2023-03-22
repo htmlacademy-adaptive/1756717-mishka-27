@@ -11,6 +11,22 @@
   color: var.$charcoal;
   background-color: var.$transparent;
   border: 2px solid var.$charcoal;
+  cursor: pointer;
+  transition: 0.3s ease-out;
+
+  &:hover {
+    color: var.$white;
+    background-color: var.$charcoal;
+  }
+
+  &:active {
+    color: rgba(var.$white, 0.3);
+    background-color: var.$charcoal;
+  }
+
+  &:disabled {
+    opacity: 0.3;
+  }
 
   @media (min-width: var.$tablet-width) {
     font-size: 17px;

@@ -1,0 +1,112 @@
+@use "../global/variable.scss" as var;
+
+.about {
+  padding: 31px 0 58px 0;
+
+  @media (min-width: var.$tablet-width) {
+    padding: 56px 0 50px 0;
+  }
+
+  @media (min-width: var.$desktop-width) {
+    padding: 68px 0 60px 0;
+  }
+}
+
+.about__title {
+  margin: 0 0 28px 0;
+
+  @media (min-width: var.$tablet-width) {
+    margin: 0 0 42px 0;
+  }
+
+  @media (min-width: var.$desktop-width) {
+    max-width: 420px;
+    margin: 0 0 39px 175px;
+  }
+}
+
+.about__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  @media (min-width: var.$tablet-width) {
+    column-count: 2;
+    max-width: 653px;
+  }
+
+  @media (min-width: var.$desktop-width) {
+    max-width: 690px;
+    margin: 0 0 0 175px;
+  }
+}
+
+.about__item {
+  margin: 0 0 33px 0;
+
+  &:first-child {
+    margin: 0 0 28px 0;
+
+    @media (min-width: var.$tablet-width) {
+      margin: 0 0 56px 0;
+    }
+  }
+
+  @media (min-width: var.$tablet-width) {
+    break-inside: avoid;
+    margin: 0 0 60px 0;
+  }
+}
+
+.about__icon {
+  margin: 0 0 16px 0;
+
+  &--flower {
+    margin: 0 0 13px 8px;
+
+    @media (min-width: var.$desktop-width) {
+      margin: 0 0 15px 8px;
+    }
+  }
+
+  &--price {
+    margin: 0 0 22px 0;
+  }
+
+  &--heart {
+    margin: 0 0 20px 7px;
+  }
+
+  &--ball {
+    margin: 0 0 12px 3px;
+
+    @media (min-width: var.$tablet-width) {
+      margin: 0 0 19px 3px;
+    }
+
+    @media (min-width: var.$desktop-width) {
+      margin: 3px 0 17px 3px;
+    }
+  }
+
+  &--rocket {
+    margin: 0 0 21px -6px;
+  }
+
+  &--gift {
+    margin: 0 0 16px 3px;
+  }
+}
+
+.about__text {
+  display: block;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 20px;
+  color: var.$black;
+
+  @media (min-width: var.$tablet-width) {
+    font-size: 20px;
+    line-height: 22px;
+  }
+}

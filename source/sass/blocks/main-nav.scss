@@ -59,7 +59,7 @@
   }
 
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: 0.3s ease-out;
 
   &:hover {
     opacity: 0.6;
@@ -128,7 +128,7 @@
   font-size: 17px;
   line-height: 24px;
   color: var.$black;
-  transition: all 0.3s ease;
+  transition: 0.3s ease-out;
 
   &[href]:hover {
     opacity: 0.6;
@@ -164,7 +164,7 @@
   right: 0;
   height: 2px;
   background-color: var.$aubergine;
-  transition: 0.3s ease;
+  transition: 0.3s ease-out;
 
   &:nth-child(1) {
     top: -4px;

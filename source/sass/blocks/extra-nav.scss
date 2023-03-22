@@ -6,7 +6,7 @@
   @media (min-width: var.$tablet-width) {
     display: flex;
     grid-column: 2 / -1;
-    justify-self: end;
+    justify-self: flex-end;
     z-index: 2;
   }
 
