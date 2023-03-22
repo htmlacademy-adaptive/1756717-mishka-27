@@ -115,6 +115,10 @@
       background-color: var.$whisper;
     }
   }
+
+  @media (min-width: var.$tablet-width) {
+    max-width: 265px;
+  }
 }
 
 .main-nav__link {

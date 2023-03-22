@@ -17,6 +17,7 @@
 
 .site-nav__item {
   @media (min-width: var.$tablet-width) {
+    max-width: 230px;
     padding: 21px 0;
   }
 
