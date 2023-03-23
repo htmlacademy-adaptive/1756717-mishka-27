@@ -1,0 +1,182 @@
+@use "../global/variable.scss" as var;
+
+.contacts {
+  position: relative;
+  padding: 38px 0 39px 0;
+
+  @media (min-width: var.$tablet-width) {
+    padding: 68px 0 57px 0;
+  }
+
+  @media (min-width: var.$desktop-width) {
+    padding: 71px 0 105px 0;
+  }
+}
+
+.contacts__wrapper {
+  @media (min-width: var.$tablet-width) {
+    &::after {
+      content: "";
+      position: absolute;
+      top: 46px;
+      right: 3px;
+      width: 47px;
+      height: 81px;
+      background-image: url("../../img/sprite.svg#icon-flag");
+    }
+  }
+
+  @media (min-width: var.$desktop-width) {
+    display: grid;
+    grid-template-columns: 110px 320px 1fr;
+    column-gap: 47px;
+
+    &::after {
+      position: static;
+      grid-column: 1 / 2;
+      margin: 63px 0 0 63px;
+    }
+  }
+}
+
+.contacts__title {
+  margin: 0 0 28px 0;
+
+  @media (min-width: var.$tablet-width) {
+    margin: 0 0 50px 0;
+  }
+
+  @media (min-width: var.$desktop-width) {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    margin: 80px 0 5px 18px;
+  }
+}
+
+.contacts__box {
+  display: grid;
+  grid-template-columns: 47px 1fr;
+  gap: 30px;
+  align-items: start;
+
+  &:not(:last-of-type) {
+    margin: 0 0 28px 0;
+  }
+
+  @media (min-width: var.$tablet-width) {
+    grid-template-columns: 55px 1fr;
+    gap: 23px;
+  }
+
+  @media (min-width: var.$desktop-width) {
+    &:not(:last-of-type) {
+      margin: 0;
+    }
+  }
+}
+
+.contacts__text {
+  margin: 0;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 30px;
+  word-break: break-word;
+
+  &--link {
+    justify-self: start;
+    line-height: 25px;
+    color: var.$charcoal;
+    border-bottom: 1px solid var.$downy;
+    transition: 0.3s ease-out;
+
+    &:hover {
+      color: var.$puerto-rico-2;
+      border-bottom-color: var.$puerto-rico-2;
+    }
+
+    &:active {
+      color: var.$puerto-rico-2;
+      border-bottom-color: rgba(var.$puerto-rico-2, 0.1);
+    }
+  }
+
+  @media (min-width: var.$tablet-width) {
+    font-size: 17px;
+
+    &--link {
+      line-height: 28px;
+    }
+  }
+
+  @media (min-width: var.$desktop-width) {
+    &--link {
+      line-height: 34px;
+    }
+  }
+}
+
+.contacts__text-wrapper {
+  margin: 0 0 62px 0;
+
+  @media (min-width: var.$tablet-width) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2px;
+    margin: 0 0 49px 0;
+  }
+
+  @media (min-width: var.$desktop-width) {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    grid-template-columns: 1fr;
+    margin: -25px 0 0 18px;
+  }
+}
+
+.contacts__map {
+  margin: 0 -30px 39px -30px;
+  background-image: url("../img/map-mobile@1x.jpg");
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/map-mobile@2x.jpg");
+  }
+
+  @media (min-width: var.$tablet-width) {
+    margin: 0 -50px 52px -50px;
+    background-image: url("../img/map-tablet@1x.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/map-tablet@2x.jpg");
+    }
+  }
+
+  @media (min-width: var.$desktop-width) {
+    grid-column: 3 / -1;
+    grid-row: 1 / 4;
+    margin: 0;
+    background-image: url("../img/map-desktop@1x.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/map-desktop@2x.jpg");
+    }
+  }
+}
+
+.contacts__map-frame {
+  width: 100%;
+  border: none;
+}
+
+.contacts__button {
+  @media (min-width: var.$tablet-width) {
+    max-width: 230px;
+    margin: 0 auto;
+  }
+
+  @media (min-width: var.$desktop-width) {
+    grid-column: 2 / 3;
+    grid-row: 3 / 4;
+    align-self: flex-end;
+    margin: 0 0 0 18px;
+  }
+}

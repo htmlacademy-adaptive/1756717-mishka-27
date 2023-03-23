@@ -1,0 +1,35 @@
+@use "../global/variable.scss" as var;
+
+.button {
+  display: block;
+  padding: 15px 15px 13px 15px;
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 20px;
+  text-transform: uppercase;
+  text-align: center;
+  color: var.$charcoal;
+  background-color: var.$transparent;
+  border: 2px solid var.$charcoal;
+  cursor: pointer;
+  transition: 0.3s ease-out;
+
+  &:hover {
+    color: var.$white;
+    background-color: var.$charcoal;
+  }
+
+  &:active {
+    color: rgba(var.$white, 0.3);
+    background-color: var.$charcoal;
+  }
+
+  &:disabled {
+    opacity: 0.3;
+  }
+
+  @media (min-width: var.$tablet-width) {
+    font-size: 17px;
+  }
+}

@@ -1,0 +1,23 @@
+@use "../global/variable.scss" as var;
+
+.social {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px 29px;
+  padding: 0;
+  list-style: none;
+}
+
+.social__link {
+  color: var.$aubergine;
+  transition: 0.3s ease-out;
+
+  &:hover {
+    color: var.$puerto-rico-2;
+  }
+
+  &:active {
+    color: var.$puerto-rico-2;
+    opacity: 0.3;
+  }
+}
