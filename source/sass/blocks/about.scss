@@ -1,14 +1,14 @@
 @use "../global/variable.scss" as var;
 
 .about {
-  padding: 31px 0 58px 0;
+  padding: 31px 0 25px 0;
 
   @media (min-width: var.$tablet-width) {
-    padding: 56px 0 50px 0;
+    padding: 56px 0 22px 0;
   }
 
   @media (min-width: var.$desktop-width) {
-    padding: 68px 0 60px 0;
+    padding: 68px 0 29px 0;
   }
 }
 

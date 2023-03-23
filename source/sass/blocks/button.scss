@@ -1,6 +1,7 @@
 @use "../global/variable.scss" as var;
 
 .button {
+  display: block;
   padding: 15px 15px 13px 15px;
   font-family: inherit;
   font-weight: 700;
