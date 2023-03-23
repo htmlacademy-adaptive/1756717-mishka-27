@@ -157,6 +157,7 @@
 .promo__picture {
   order: 4;
   margin: 0 0 27px 0;
+  background-color: var.$whisper;
 
   @media (min-width: var.$tablet-width) {
     order: 5;
