@@ -1,0 +1,1 @@
+const navMain=document.querySelector(".main-nav"),navToggle=document.querySelector(".main-nav__toggle");navMain.classList.remove("main-nav--no-js"),navToggle.addEventListener("click",(()=>{navMain.classList.contains("main-nav--opened")?navMain.classList.remove("main-nav--opened"):navMain.classList.add("main-nav--opened")}));
