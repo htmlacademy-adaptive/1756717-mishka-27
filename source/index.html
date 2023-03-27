@@ -76,20 +76,29 @@
       <div class="hero__wrapper">
         <h2 class="hero__title">Милые штуки<br class="hero__break"> ручной<br class="hero__break"> работы для дома</h2>
       </div>
-      <div class="container">
-        <ul class="hero__list">
-          <li class="hero__item hero__item--interior">
-            <a class="hero__link" href="#">
-              <span class="hero__text">Предметы интерьера</span>
-            </a>
-          </li>
-          <li class="hero__item hero__item--toy">
-            <a class="hero__link" href="#">
-              <span class="hero__text">Детские игрушки</span>
-            </a>
-          </li>
-        </ul>
-      </div>
+      <picture>
+        <source type="image/webp" media="(min-width: 1150px)"
+          srcset="img/hero-desktop@1x.webp 1x,  img/hero-desktop@2x.webp 2x">
+        <source type="image/webp" media="(min-width: 768px)"
+          srcset="img/hero-tablet@1x.webp 1x, img/hero-tablet@2x.webp 2x">
+        <source type="image/webp" srcset="img/hero-mobile@1x.webp 1x, img/hero-mobile@2x.webp 2x">
+        <source media="(min-width: 1150px)" srcset="img/hero-desktop@1x.jpg 1x, img/hero-desktop@2x.jpg 2x">
+        <source media="(min-width: 768px)" srcset="img/hero-tablet@1x.jpg 1x, img/hero-tablet@2x.jpg 2x">
+        <img class="hero__img" width="569" height="373" src="img/hero-mobile@1x.jpg" srcset="img/hero-mobile@2x.jpg 2x"
+          alt="Пример работ.">
+      </picture>
+      <ul class="hero__list">
+        <li class="hero__item hero__item--interior">
+          <a class="hero__link" href="#">
+            <span class="hero__text">Предметы интерьера</span>
+          </a>
+        </li>
+        <li class="hero__item hero__item--toy">
+          <a class="hero__link" href="#">
+            <span class="hero__text">Детские игрушки</span>
+          </a>
+        </li>
+      </ul>
     </section>
     <section class="promo">
       <div class="container">
