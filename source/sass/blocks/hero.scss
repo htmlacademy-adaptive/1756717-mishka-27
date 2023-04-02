@@ -7,8 +7,6 @@
 
   @media (min-width: var.$tablet-width) {
     position: relative;
-    margin: -66px 0 0 0;
-    border-top: 1px solid rgba(var.$black, 0.1);
 
     &::after {
       content: "";
@@ -50,12 +48,12 @@
   padding: 70px 0 20px 0;
 
   @media (min-width: var.$tablet-width) {
-    min-height: 626px;
-    padding: 154px 0 20px 0;
+    min-height: 561px;
+    padding: 90px 0 20px 0;
   }
 
   @media (min-width: var.$desktop-width) {
-    padding: 158px 0 20px 0;
+    padding: 92px 0 20px 0;
   }
 }
 
@@ -101,7 +99,7 @@
   object-fit: contain;
 
   @media (min-width: var.$tablet-width) {
-    top: 0;
+    top: -65px;
     bottom: 0;
     max-height: 758px;
   }
