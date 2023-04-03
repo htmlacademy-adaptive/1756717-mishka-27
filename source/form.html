@@ -103,11 +103,11 @@
             </div>
           </div>
         </fieldset>
-        <fieldset class="form__group">
+        <fieldset class="form__group form__group--checkbox">
           <div class="container">
-            <div class="form__wrapper">
+            <div class="form__wrapper form__wrapper--checkbox">
               <h2 class="form__title">Цвет</h2>
-              <ul class="form__list">
+              <ul class="form__list form__list--checkbox">
                 <li class="form__item form__item--large-indent">
                   <label class="form__control">
                     <input class="visually-hidden form__control-input form__control-input--checkbox" type="checkbox"
@@ -186,31 +186,29 @@
         </fieldset>
         <fieldset class="form__group form__group--small-indent">
           <div class="container">
-            <div class="form__wrapper">
-              <h2 class="visually-hidden">Контактные данные</h2>
-              <div class="form__item-wrapper">
-                <div class="form__item form__item--medium-indent">
-                  <label class="form__title form__title--smallest-indent" for="user-phone">Тел</label>
-                  <div class="form__input-wrapper">
-                    <input class="form__input input" type="tel" id="user-phone" name="user-phone"
-                      placeholder="+7 ХХХ ХХХ ХХ ХХ*" required>
-                    <svg class="form__input-img" aria-hidden="true" focusable="false" width="25" height="24">
-                      <use xlink:href="img/sprite.svg#icon-phone"></use>
-                    </svg>
-                  </div>
-                </div>
-                <div class="form__item">
-                  <label class="form__title form__title--smallest-indent" for="user-email">E-mail</label>
-                  <div class="form__input-wrapper">
-                    <input class="form__input input" type="email" id="user-email" name="user-email"
-                      placeholder="Ваш Email*" required>
-                    <svg class="form__input-img" aria-hidden="true" focusable="false" width="32" height="21">
-                      <use xlink:href="img/sprite.svg#icon-email"></use>
-                    </svg>
-                  </div>
-                </div>
+            <h2 class="visually-hidden">Контактные данные</h2>
+            <div class="form__item form__item--medium-indent form__wrapper">
+              <label class="form__title form__title--smallest-indent" for="user-phone">Тел</label>
+              <div class="form__input-wrapper">
+                <input class="form__input input" type="tel" id="user-phone" name="user-phone"
+                  placeholder="+7 ХХХ ХХХ ХХ ХХ*" required>
+                <svg class="form__input-img" aria-hidden="true" focusable="false" width="25" height="24">
+                  <use xlink:href="img/sprite.svg#icon-phone"></use>
+                </svg>
               </div>
             </div>
+            <div class="form__item form__item--medium-indent form__wrapper">
+              <label class="form__title form__title--smallest-indent" for="user-email">E-mail</label>
+              <div class="form__input-wrapper">
+                <input class="form__input input" type="email" id="user-email" name="user-email" placeholder="Ваш Email*"
+                  required>
+                <svg class="form__input-img" aria-hidden="true" focusable="false" width="32" height="21">
+                  <use xlink:href="img/sprite.svg#icon-email"></use>
+                </svg>
+              </div>
+            </div>
+          </div>
+          </div>
           </div>
         </fieldset>
         <fieldset class="form__group">
