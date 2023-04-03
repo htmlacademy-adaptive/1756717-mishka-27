@@ -37,7 +37,7 @@
 
   @media (min-width: var.$desktop-width) {
     min-height: 196px;
-    margin: 0 0 110px 0;
+    margin: 0 0 121px 0;
 
     &::after {
       bottom: -11px;
@@ -82,12 +82,22 @@
     gap: 54px;
     margin: 0 0 53px 0;
   }
+
+  @media (min-width: var.$desktop-width) {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 51px;
+    margin: 0 0 57px 0;
+  }
 }
 
 .catalog__item {
   @media (min-width: var.$tablet-width) {
     display: grid;
     grid-template-columns: 334px 1fr;
+  }
+
+  @media (min-width: var.$desktop-width) {
+    grid-template-columns: 1fr;
   }
 }
 
@@ -109,6 +119,10 @@
     display: flex;
     flex-direction: column;
     padding: 27px 32px 0 34px;
+  }
+
+  @media (min-width: var.$desktop-width) {
+    padding: 27px 34px 0 28px;
   }
 }
 
@@ -147,6 +161,10 @@
 
   @media (min-width: var.$tablet-width) {
     font-size: 15px;
+  }
+
+  @media (min-width: var.$desktop-width) {
+    margin: 0 0 12px 0;
   }
 }
 
