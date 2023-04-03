@@ -97,7 +97,8 @@
   }
 
   @media (min-width: var.$desktop-width) {
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
   }
 }
 
@@ -123,6 +124,7 @@
 
   @media (min-width: var.$desktop-width) {
     padding: 27px 34px 0 28px;
+    min-height: 197px;
   }
 }
 
