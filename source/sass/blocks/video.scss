@@ -5,21 +5,32 @@
   flex-direction: column;
   margin: 0 0 58px 0;
   padding: 22px 0 33px 0;
-  border-top: 1px solid var.$whisper;
-  border-bottom: 1px solid var.$whisper;
+  border: 1px solid var.$whisper;
+
+  @media (min-width: var.$tablet-width) {
+    padding: 0 0 50px 0;
+  }
 }
 
 .video__picture-wrapper {
   position: relative;
   margin: 0 0 30px 0;
+
+  @media (min-width: var.$tablet-width) {
+    margin: 0 0 39px 0;
+  }
 }
 
 .video__title-wrapper {
   display: flex;
-  justify-content: space-between;
   align-items: center;
   margin: 0 0 27px 34px;
   order: -1;
+
+  @media (min-width: var.$tablet-width) {
+    order: unset;
+    margin: 0 0 27px 40px;
+  }
 }
 
 .video__title {
@@ -27,16 +38,26 @@
   font-size: 17px;
   line-height: 24px;
   color: var.$black;
+
+  @media (min-width: var.$tablet-width) {
+    font-size: 20px;
+  }
 }
 
 .video__icon {
   min-width: 32px;
   margin: 0 25px 0 0;
+
+  @media (min-width: var.$tablet-width) {
+    margin: 0 33px 0 0;
+  }
 }
 
 .video__img {
+  display: block;
   width: 100%;
   object-fit: cover;
+  box-sizing: content-box;
 }
 
 .video__button {
@@ -56,11 +77,20 @@
 
 .video__text-wrapper {
   margin: 0 33px 0 33px;
+
+  @media (min-width: var.$tablet-width) {
+    margin: 0 38px;
+  }
 }
 
 .video__lead {
   margin: 0 0 41px 0;
   font-size: 13px;
   line-height: 24px;
+
+  @media (min-width: var.$tablet-width) {
+    font-size: 15px;
+    line-height: 30px;
+  }
 }
 
