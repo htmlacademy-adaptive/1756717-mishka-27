@@ -12,7 +12,6 @@
 
 <body class="page-body">
   <header class="main-header">
-    <div class="container">
       <nav class="main-nav main-nav--no-js">
         <div class="main-nav__wrapper-top">
           <span class="main-nav__logo">
@@ -68,7 +67,6 @@
           </li>
         </ul>
       </nav>
-    </div>
   </header>
   <main class="main-page">
     <h1 class="visually-hidden">Магазин игрушек "Мишка"</h1>
@@ -76,20 +74,29 @@
       <div class="hero__wrapper">
         <h2 class="hero__title">Милые штуки<br class="hero__break"> ручной<br class="hero__break"> работы для дома</h2>
       </div>
-      <div class="container">
-        <ul class="hero__list">
-          <li class="hero__item hero__item--interior">
-            <a class="hero__link" href="#">
-              <span class="hero__text">Предметы интерьера</span>
-            </a>
-          </li>
-          <li class="hero__item hero__item--toy">
-            <a class="hero__link" href="#">
-              <span class="hero__text">Детские игрушки</span>
-            </a>
-          </li>
-        </ul>
-      </div>
+      <picture>
+        <source type="image/webp" media="(min-width: 1150px)"
+          srcset="img/hero-desktop@1x.webp 1x,  img/hero-desktop@2x.webp 2x">
+        <source type="image/webp" media="(min-width: 768px)"
+          srcset="img/hero-tablet@1x.webp 1x, img/hero-tablet@2x.webp 2x">
+        <source type="image/webp" srcset="img/hero-mobile@1x.webp 1x, img/hero-mobile@2x.webp 2x">
+        <source media="(min-width: 1150px)" srcset="img/hero-desktop@1x.jpg 1x, img/hero-desktop@2x.jpg 2x">
+        <source media="(min-width: 768px)" srcset="img/hero-tablet@1x.jpg 1x, img/hero-tablet@2x.jpg 2x">
+        <img class="hero__img" width="569" height="373" src="img/hero-mobile@1x.jpg" srcset="img/hero-mobile@2x.jpg 2x"
+          alt="Пример работ.">
+      </picture>
+      <ul class="hero__list">
+        <li class="hero__item hero__item--interior">
+          <a class="hero__link" href="#">
+            <span class="hero__text">Предметы интерьера</span>
+          </a>
+        </li>
+        <li class="hero__item hero__item--toy">
+          <a class="hero__link" href="#">
+            <span class="hero__text">Детские игрушки</span>
+          </a>
+        </li>
+      </ul>
     </section>
     <section class="promo">
       <div class="container">
@@ -305,6 +312,29 @@
       </div>
     </div>
   </footer>
+  <div class="modal modal--close">
+    <div class="modal__content">
+      <h2 class="modal__title">Добавить в&nbsp;корзину</h2>
+      <p class="modal__text">Выберите размер:</p>
+      <form class="modal__form" action="https://echo.htmlacademy.ru/" method="post">
+        <ul class="modal__list">
+          <li class="modal__item">
+            <input class="visually-hidden modal__radio" id="S" name="size" value="S" type="radio" checked>
+            <label class="modal__label" for="S">S</label>
+          </li>
+          <li class="modal__item">
+            <input class="visually-hidden modal__radio" id="M" name="size" value="M" type="radio">
+            <label class="modal__label" for="M">M</label>
+          </li>
+          <li class="modal__item">
+            <input class="visually-hidden modal__radio" id="L" name="size" value="L" type="radio">
+            <label class="modal__label" for="L">L</label>
+          </li>
+        </ul>
+        <button class="modal__button button button--accent" type="submit">Добавить</button>
+      </form>
+    </div>
+  </div>
   <script src="js/script.js"></script>
 </body>
 

@@ -29,6 +29,22 @@
     opacity: 0.3;
   }
 
+  &--accent {
+    color: var.$white;
+    background-color: var.$downy;
+    border: none;
+
+    &:hover {
+      opacity: 0.6;
+      background-color: var.$downy;
+    }
+
+    &:active {
+      opacity: 0.3;
+      background-color: var.$downy;
+    }
+  }
+
   @media (min-width: var.$tablet-width) {
     font-size: 17px;
   }

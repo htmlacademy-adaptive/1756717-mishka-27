@@ -5,13 +5,15 @@
 
   @media (min-width: var.$tablet-width) {
     display: flex;
-    grid-column: 2 / -1;
+    flex-wrap: wrap;
+    grid-column: 3 / 4;
+    grid-row: 2 / 3;
     justify-self: flex-end;
     z-index: 2;
   }
 
   @media (min-width: var.$desktop-width) {
-    grid-column: 1 / -1;
+    grid-column: 2 / -2;
     width: 100%;
   }
 }

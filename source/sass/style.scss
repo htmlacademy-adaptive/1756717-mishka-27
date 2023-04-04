@@ -5,6 +5,7 @@
 @use "blocks/container.scss";
 @use "blocks/button.scss";
 @use "blocks/title.scss";
+@use "blocks/main-header.scss";
 @use "blocks/main-nav.scss";
 @use "blocks/extra-nav.scss";
 @use "blocks/user-nav.scss";
@@ -16,3 +17,9 @@
 @use "blocks/contacts.scss";
 @use "blocks/main-footer.scss";
 @use "blocks/social.scss";
+@use "blocks/input.scss";
+@use "blocks/form.scss";
+@use "blocks/order-form.scss";
+@use "blocks/catalog.scss";
+@use "blocks/video.scss";
+@use "blocks/modal.scss";
