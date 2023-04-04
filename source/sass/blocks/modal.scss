@@ -1,0 +1,113 @@
+@use "../global/variable.scss" as var;
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(var.$white, 0.9);
+}
+
+.modal--close {
+  display: none;
+}
+
+.modal__content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 566px;
+  margin: auto;
+  padding: 29px 30px 46px 30px;
+  background-color: var.$white;
+  border: 1px solid var.$silver;
+  box-shadow: 0 5px 10px rgba(var.$silver, 0.25);
+
+  @media (min-width: var.$tablet-width) {
+    padding: 40px 93px 46px 93px;
+  }
+}
+
+.modal__title {
+  margin: 0 0 14px 0;
+  font-size: 25px;
+  line-height: 30px;
+  color: var.$black;
+  text-align: center;
+  text-transform: uppercase;
+
+  @media (min-width: var.$tablet-width) {
+    margin: 0 0 11px 0;
+    font-size: 30px;
+    line-height: 57px;
+  }
+}
+
+.modal__text {
+  margin: 0 0 22px 0;
+  font-size: 15px;
+  line-height: 30px;
+  text-align: center;
+
+  @media (min-width: var.$tablet-width) {
+    margin: 0 0 20px 0;
+    font-size: 17px;
+  }
+}
+
+.modal__list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 7px;
+  max-width: 260px;
+  margin: 0 auto 34px auto;
+  padding: 0;
+  list-style: none;
+
+  @media (min-width: var.$tablet-width) {
+    max-width: 350px;
+  }
+}
+
+.modal__item {
+  min-width: 82px;
+
+  @media (min-width: var.$tablet-width) {
+    min-width: 112px;
+  }
+}
+
+.modal__label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 82px;
+  min-height: 52px;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 16px;
+  border: 2px solid rgba(var.$charcoal, 0.1);
+
+  @media (min-width: var.$tablet-width) {
+    max-width: 112px;
+  }
+}
+
+.modal__button {
+  width: 100%;
+  max-width: 260px;
+  margin: 0 auto;
+  padding: 15px 15px 15px 15px;
+
+  @media (min-width: var.$tablet-width) {
+    max-width: 350px;
+  }
+}
+
+.modal__radio:checked + .modal__label {
+  border: 2px solid var.$downy;
+}
