@@ -9,7 +9,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-end;
-    grid-column: 2 / -1;
+    grid-column: 3 / 4;
     grid-row: 1 / 2;
     width: auto;
     margin: 0 -50px 0 0;
@@ -17,7 +17,7 @@
   }
 
   @media (min-width: var.$desktop-width) {
-    grid-column: 3 / -1;
+    grid-column: 4 / 5;
     padding: 0 52px 0 0;
   }
 }
