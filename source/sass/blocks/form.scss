@@ -351,6 +351,7 @@
   right: 6px;
   transform: translateY(-50%);
   color: rgba(var.$black, 0.2);
+  pointer-events: none;
 
   @media (min-width: var.$tablet-width) {
     right: 24px;

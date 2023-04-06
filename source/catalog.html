@@ -5,33 +5,37 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Мишка - страница формы</title>
+  <link rel="icon" href="favicon.ico">
+  <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="img/favicons/apple.png">
+  <link rel="manifest" href="manifest.webmanifest">
   <link rel="stylesheet" href="css/style.min.css">
   <link rel="preload" href="fonts/opensans.woff2" type="font/woff2" as="font" crossorigin="anonymous">
   <link rel="preload" href="fonts/opensansbold.woff2" type="font/woff2" as="font" crossorigin="anonymous">
 </head>
 
 <body class="page-body">
-  <header class="main-header">
-    <nav class="main-nav main-nav--no-js">
-      <div class="main-nav__wrapper-top">
-        <a class="main-nav__logo" href="index.html">
-          <picture>
-            <source media="(min-width: 1150px)" srcset="img/logo-desktop.svg">
-            <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
-            <img class="main-nav__logo-img" width="86" height="35" src="img/logo-mobile.svg" alt="Логотип Mishka.">
-          </picture>
-        </a>
-        <button class="main-nav__toggle" type="button">
-          <span class="main-nav__toggle-line"></span>
-          <span class="main-nav__toggle-line"></span>
-          <span class="main-nav__toggle-line"></span>
-          <span class="main-nav__toggle-line"></span>
-          <span class="visually-hidden">Открыть меню</span>
-        </button>
-      </div>
+  <header class="main-header main-header--no-js">
+    <div class="main-header__wrapper-top">
+      <span class="main-header__logo">
+        <picture>
+          <source media="(min-width: 1150px)" srcset="img/logo-desktop.svg">
+          <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+          <img class="main-header__logo-img" width="86" height="35" src="img/logo-mobile.svg" alt="Логотип Mishka.">
+        </picture>
+      </span>
+      <button class="main-header__toggle" type="button">
+        <span class="main-header__toggle-line"></span>
+        <span class="main-header__toggle-line"></span>
+        <span class="main-header__toggle-line"></span>
+        <span class="main-header__toggle-line"></span>
+        <span class="visually-hidden">Открыть меню</span>
+      </button>
+    </div>
+    <nav class="main-header__nav main-nav">
       <ul class="main-nav__list site-nav">
         <li class="main-nav__item site-nav__item">
-          <span class="main-nav__link site-nav__link">Каталог товаров</span>
+          <a class="main-nav__link site-nav__link" href="catalog.html">Каталог товаров</a>
         </li>
         <li class="main-nav__item site-nav__item">
           <a class="main-nav__link site-nav__link" href="form.html">Вязание на заказ</a>
@@ -257,6 +261,7 @@
         </a>
       </div>
     </div>
+    <!-- Для открытия модального окна убрать класс modal--close -->
     <div class="modal modal--close">
       <div class="modal__content">
         <h2 class="modal__title">Добавить в&nbsp;корзину</h2>

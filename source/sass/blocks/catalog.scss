@@ -129,6 +129,7 @@
 .catalog__wrapper {
   padding: 27px 28px 0 28px;
   border: 1px solid var.$whisper;
+  transition: 0.3s ease-out;
 
   @media (min-width: var.$tablet-width) {
     display: flex;

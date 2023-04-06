@@ -1,14 +1,14 @@
 /* Menu */
 
-const navMain = document.querySelector('.main-nav');
-const navToggle = document.querySelector('.main-nav__toggle');
+const header = document.querySelector('.main-header');
+const navToggle = document.querySelector('.main-header__toggle');
 
-navMain.classList.remove('main-nav--no-js');
+header.classList.remove('main-header--no-js');
 
 navToggle.addEventListener('click', () => {
-  if (navMain.classList.contains('main-nav--opened')) {
-    navMain.classList.remove('main-nav--opened');
+  if (header.classList.contains('main-header--opened')) {
+    header.classList.remove('main-header--opened');
   } else {
-    navMain.classList.add('main-nav--opened');
+    header.classList.add('main-header--opened');
   }
 });
