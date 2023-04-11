@@ -4,6 +4,24 @@
   @media (max-width: var.$mobile-width-only) {
     max-height: 81px;
   }
+
+  &--no-js {
+    .main-header__nav {
+      @media (max-width: var.$mobile-width-only) {
+        position: static;
+        display: block;
+        width: 100%;
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    .main-header__toggle {
+      @media (max-width: var.$mobile-width-only) {
+        display: none;
+      }
+    }
+  }
 }
 
 .main-header__wrapper-top {
