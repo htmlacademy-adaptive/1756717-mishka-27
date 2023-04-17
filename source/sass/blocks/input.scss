@@ -23,6 +23,10 @@
     border-color: var.$downy;
   }
 
+  &.error {
+    border-color: var.$coral;
+  }
+
   @media (min-width: var.$tablet-width) {
     padding: 12px 35px 12px 18px;
     font-size: 19px;

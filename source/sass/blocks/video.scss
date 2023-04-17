@@ -1,28 +1,66 @@
 @use "../global/variable.scss" as var;
 
 .video {
+  position: relative;
   display: flex;
   flex-direction: column;
   margin: 0 0 58px 0;
   padding: 22px 0 33px 0;
   border: 1px solid var.$whisper;
+  transition: 0.3s ease-out;
 
   &:hover {
     box-shadow: 0 6px 10px rgba(var.$black, 0.1);
+
+    @media (min-width: var.$tablet-width) {
+      box-shadow: unset;
+
+      &::after {
+        display: block;
+        box-shadow: 0 6px 10px rgba(var.$black, 0.1);
+      }
+    }
   }
 
   &:active {
     box-shadow: 0 3px 5px rgba(var.$black, 0.1);
+
+    @media (min-width: var.$tablet-width) {
+      box-shadow: unset;
+
+      &::after {
+        display: block;
+        box-shadow: 0 3px 5px rgba(var.$black, 0.1);
+      }
+    }
+  }
+
+  &::after {
+    @media (min-width: var.$tablet-width) {
+      content: "";
+      position: absolute;
+      display: none;
+      width: 100%;
+      height: 100%;
+      grid-row: 2 / 5;
+      transition: 0.3s ease-out;
+    }
+
+    @media (min-width: var.$desktop-width) {
+      grid-column: 2 / 3;
+    }
   }
 
   @media (min-width: var.$tablet-width) {
+    display: grid;
+    grid-template-rows: auto auto;
     padding: 0 0 50px 0;
   }
 
   @media (min-width: var.$desktop-width) {
     display: grid;
     grid-template-columns: 683px 1fr;
-    column-gap: 80px;
+    grid-template-rows: unset;
     padding: 0;
     margin: 0 0 102px 0;
   }
@@ -60,6 +98,7 @@
     flex-direction: column;
     align-items: start;
     margin: 47px 0 27px 0;
+    padding: 0 0 0 80px;
   }
 }
 
@@ -98,6 +137,10 @@
   box-sizing: content-box;
 }
 
+.video__icon-play {
+  transition: 0.3s ease-out;
+}
+
 .video__button {
   position: absolute;
   top: 0;
@@ -123,7 +166,7 @@
   &:active {
     > .video__icon-play {
       transform: scale(0.8);
-      color: rgba(var.$downy, 0.3);
+      opacity: 0.3;
     }
   }
 }
@@ -139,6 +182,7 @@
     grid-column: 2 / -1;
     grid-row: 2 / 3;
     margin: 0 57px 0 0;
+    padding: 0 0 0 80px;
   }
 }
 

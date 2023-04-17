@@ -5,6 +5,18 @@
   flex-direction: column;
   background-color: var.$snow;
 
+  &--no-js {
+    @media (max-width: var.$mobile-width-only) {
+      margin: 320px 0 0 0;
+    }
+
+    .hero__img {
+      @media (max-width: var.$mobile-width-only) {
+        top: 380px;
+      }
+    }
+  }
+
   @media (min-width: var.$tablet-width) {
     position: relative;
 

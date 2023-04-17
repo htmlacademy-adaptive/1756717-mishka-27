@@ -2,12 +2,10 @@
 
 .main-nav {
   position: relative;
-  padding: 0 30px;
 
   @media (min-width: var.$tablet-width) {
     display: grid;
     grid-template-columns: 50px minmax(316px, 1fr) minmax(350px, 1fr) 50px;
-    padding: 0;
   }
 
   @media (min-width: var.$desktop-width) {
@@ -29,93 +27,10 @@
   }
 }
 
-.main-nav__wrapper-top {
-  position: relative;
-  display: flex;
-  align-items: center;
-  width: auto;
-  margin: 0 -30px;
-  padding: 36px 0 31px 0;
-
-  &::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    display: block;
-    height: 1px;
-    width: 100%;
-    background-color: var.$whisper;
-  }
-
-  @media (min-width: var.$tablet-width) {
-    grid-column: 2 / 3;
-    grid-row: 1 / 2;
-    margin: 0;
-    padding: 22px 0 16px 0;
-
-    &::after {
-      width: 0;
-      height: 0;
-    }
-  }
-
-  @media (min-width: var.$desktop-width) {
-    grid-column: 3 / 4;
-    grid-row: 1 / 2;
-    margin: 0;
-    padding: 9px 0 3px 0;
-  }
-}
-
-.main-nav__logo {
-  @media (max-width: var.$mobile-width-only) {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    display: block;
-    transform: translate(-50%, -50%);
-  }
-
-  cursor: pointer;
-  transition: 0.3s ease-out;
-
-  &:hover {
-    opacity: 0.6;
-  }
-
-  &:active {
-    opacity: 0.3;
-  }
-}
-
-
-.main-nav__logo-img {
-  @media (min-width: var.$tablet-width) {
-    width: 113px;
-    height: 46px;
-  }
-
-  @media (min-width: var.$desktop-width) {
-    width: 149px;
-    height: 72px;
-  }
-}
-
 .main-nav__list {
   margin: 0;
   padding: 0;
   list-style: none;
-
-  @media (max-width: var.$mobile-width-only) {
-    position: absolute;
-    left: 0;
-    right: 0;
-    display: none;
-    background-color: var.$white;
-    z-index: 3;
-  }
 }
 
 .main-nav__item {
@@ -200,34 +115,5 @@
 
   &:nth-child(4) {
     top: 8px;
-  }
-}
-
-.main-nav--opened {
-  .main-nav__list {
-    &:not(:last-of-type) {
-      @media (max-width: var.$mobile-width-only) {
-        display: block;
-      }
-    }
-  }
-
-
-  .main-nav__toggle-line {
-    &:nth-child(1) {
-      transform: scaleX(0);
-    }
-
-    &:nth-child(2) {
-      transform: rotate(45deg);
-    }
-
-    &:nth-child(3) {
-      transform: rotate(-45deg);
-    }
-
-    &:nth-child(4) {
-      transform: scaleX(0);
-    }
   }
 }
