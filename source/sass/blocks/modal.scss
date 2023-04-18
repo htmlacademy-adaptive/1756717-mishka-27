@@ -97,6 +97,10 @@
   }
 }
 
+.modal__radio:hover + .modal__label {
+  border-color: rgba(var.$charcoal, 0.3);
+}
+
 .modal__button {
   width: 100%;
   max-width: 260px;
